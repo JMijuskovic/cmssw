@@ -3,8 +3,8 @@ from CRABClient.UserUtilities import getUsername
 
 config = Configuration()
 
-inputList = 'list_PhysicsHIPhysicsRawPrime0_374322.txt'
-jobTag = "PbPb2023_run374322_HIExpress_withDFinder_2023-09-27"
+inputList = 'list_HIExpressRawPrime_374345.txt'
+jobTag = "PbPb2023_run374345_HIExpressRawPrime_withDFinder_2023-09-28"
 username = getUsername()
 
 config.section_("General")
@@ -27,8 +27,7 @@ config.Data.totalUnits = len(config.Data.userInputFiles)
 config.Data.inputDBS = 'global'
 config.Data.splitting = 'FileBased'
 config.Data.unitsPerJob = 2
-#config.Data.outLFNDirBase = '/store/group/phys_heavyions/' + username + '/run3RapidValidation/' + config.General.requestName
-config.Data.outLFNDirBase = '/store/user/' + username + '/run3RapidValidation/' + config.General.requestName
+config.Data.outLFNDirBase = '/store/group/phys_heavyions/' + username + '/run3RapidValidation/' + config.General.requestName
 config.Data.publication = False
 
 config.section_("Site")
